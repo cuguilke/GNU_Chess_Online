@@ -1,2 +1,2 @@
-# GNU_Chess_Online
+# GNU_Chess_Online - Factory
 Online version of GNUChess 
