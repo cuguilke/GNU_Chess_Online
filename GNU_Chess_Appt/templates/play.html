@@ -1,0 +1,79 @@
+<html>  
+	<title> GNU Chess Wrapper </title> 
+	<head>
+		<style>
+			header {
+			    background-color:black;
+			    color:white;
+			    text-align:center;
+			    padding:15px;	 
+			}
+			nav {
+			    line-height:30px;
+			    background-color:#eeeeee;
+			    height:450px;
+			    width:125px;
+			    float:left;
+			    padding:5px;	      
+			}
+			section {
+			    padding:150px;
+			    text-align:center;	 
+			}
+			footer {
+			    background-color:black;
+			    color:white;
+			    clear:both;
+			    text-align:center;
+			    padding:5px;	 	 
+			}
+		</style>
+	</head> 
+<body> 
+	<header>
+		<h1>GNU Chess Wrapper</h1>
+	</header>  
+	<nav>
+		<form action="/resume" method="post">
+		<input type="submit" name="action" value="Resume" style="height:20px; width:115px"><br>
+		{% csrf_token %}
+		</form>
+		<form action="/new" method="post">
+		<input type="submit" name="action" value="New" style="height:20px; width:115px"><br>
+		{% csrf_token %}
+		</form>
+		<form action="/loadv" method="post">
+		<input type="submit" name="action" value="Load" style="height:20px; width:115px"><br>
+		{% csrf_token %}
+		</form>
+		<form action="/savev" method="post">
+		<input type="submit" name="action" value="Save" style="height:20px; width:115px"><br><br><br><br><br><br>
+		{% csrf_token %}
+		</form>
+		<form action="/logout" method="post">
+		<input type="submit" name="action" value="Logout" style="height:20px; width:115px"><br>
+		{% csrf_token %}
+		</form>
+	</nav>
+
+	<section>
+		{{ message }} <br>
+		<textarea name="message" rows="10" cols="16">
+		{{ play_message }}
+		</textarea>
+		<form action="/playp" method="post">
+			<tr><td><b>Move:</b></td>
+			<td><input type="input" name="Move" size="20"></td></tr>
+			<tr><td colspan="2" align="right"> <input type="submit" name="action" value="Submit"></td></tr>
+			{% csrf_token %}
+		</form> 
+		</p>
+	</section> 
+	<footer>
+		Coded By Cugu & Sener
+	</footer>
+
+</body>
+</html>
+ 
+

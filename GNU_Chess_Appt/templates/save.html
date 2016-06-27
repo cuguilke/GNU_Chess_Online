@@ -1,0 +1,53 @@
+<html>  
+	<title> GNU Chess Wrapper </title> 
+	<head>
+		<style>
+			header {
+			    background-color:black;
+			    color:white;
+			    text-align:center;
+			    padding:15px;	 
+			}
+			nav {
+			    line-height:30px;
+			    background-color:#eeeeee;
+			    height:450px;
+			    width:125px;
+			    float:left;
+			    padding:5px;	      
+			}
+			section {
+			    padding:150px;
+			    text-align:center;	 
+			}
+			footer {
+			    background-color:black;
+			    color:white;
+			    clear:both;
+			    text-align:center;
+			    padding:5px;	 	 
+			}
+		</style>
+	</head> 
+<body> 
+	<header>
+		<h1>GNU Chess Wrapper</h1>
+	</header> 
+	<section>
+	Indicate the save name <br/>
+		<form action="/savep" method="post">
+			<input type="input" name="savename" size=20/><br/>
+			<input type="submit" name="action" value="OK"/>
+			{% csrf_token %}
+		</form> <br> {{ message }} <br> <br>
+		<a href="/playv">Go back</a> <br>
+		</p> 
+	</section>
+ 
+
+	<footer>
+		Coded By Cugu & Sener
+	</footer>
+
+</body>
+</html>

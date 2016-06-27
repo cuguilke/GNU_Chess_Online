@@ -1,0 +1,56 @@
+<html>  
+	<title> GNU Chess Wrapper </title> 
+	<head>
+		<style>
+			header {
+			    background-color:black;
+			    color:white;
+			    text-align:center;
+			    padding:15px;	 
+			}
+			nav {
+			    line-height:30px;
+			    background-color:#eeeeee;
+			    height:450px;
+			    width:125px;
+			    float:left;
+			    padding:5px;	      
+			}
+			section {
+			    padding:150px;
+			    text-align:center;	 
+			}
+			footer {
+			    background-color:black;
+			    color:white;
+			    clear:both;
+			    text-align:center;
+			    padding:5px;	 	 
+			}
+		</style>
+	</head> 
+<body> 
+	<header>
+		<h1>GNU Chess Wrapper</h1>
+	</header> 
+	<section>
+		<h1>Welcome to the GNU Chess World!!!</h1> 
+		<form action="/signupp" method="post">
+		<table border="0" align="center"> 
+			<tr><td><b>Username</b></td> <td ><input type="input" name="username" size="20"></td></tr> 
+			<tr><td><b>Password</b></td> <td align="center"><input type="password" name="password" size="20"></td></tr> 
+			<tr><td colspan="2" align="right"> <input type="submit" name="signup" value="Sign Up"> </td></tr> 
+			{% csrf_token %}
+		</table>
+		</form>
+	</section>
+ 
+
+	<footer>
+		Coded By Cugu & Sener
+	</footer>
+
+</body>
+</html>
+ 
+
